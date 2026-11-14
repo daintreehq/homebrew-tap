@@ -5,13 +5,13 @@
 class Spotexec < Formula
   desc "Offload tests and builds from local worktrees to remote and AWS Spot runners"
   homepage "https://github.com/daintreehq/spotexec"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.2/spotexec_0.1.2_darwin_amd64.tar.gz"
-      sha256 "dcfdef29efe310b74842d15aa6743f6b15595a05797165d05d680c7910a9f0d9"
+      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.3/spotexec_0.1.3_darwin_amd64.tar.gz"
+      sha256 "d86e9ec50fabf9c87bc861c42985728a1fd830fa608ac7fe0fada4c4ec22590d"
 
       define_method(:install) do
         bin.install "spotexec"
@@ -20,8 +20,8 @@ class Spotexec < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.2/spotexec_0.1.2_darwin_arm64.tar.gz"
-      sha256 "4a50619ff5d56aec42f81dd6584acbfa85566c8b6f838a16e8774829a02d4520"
+      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.3/spotexec_0.1.3_darwin_arm64.tar.gz"
+      sha256 "356d44068de99691569b7ecf6dbb587796cb3343bbc8e284f82aeccf9d1befa0"
 
       define_method(:install) do
         bin.install "spotexec"
@@ -33,8 +33,8 @@ class Spotexec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.2/spotexec_0.1.2_linux_amd64.tar.gz"
-      sha256 "15512f19d6d1590262d689907f9f972cff4be91724919af9432563137d442391"
+      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.3/spotexec_0.1.3_linux_amd64.tar.gz"
+      sha256 "113f62d313a54511a1312326a66d3a86f99baddda09db88a13f51a34ebe9deac"
       define_method(:install) do
         bin.install "spotexec"
         bin.install_symlink "spotexec" => "sx"
@@ -42,8 +42,8 @@ class Spotexec < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.2/spotexec_0.1.2_linux_arm64.tar.gz"
-      sha256 "c898786a51ca66559c3b74b5a0fbcdbb7e95f03dff03d379f2f7999e721c5c6a"
+      url "https://github.com/daintreehq/spotexec/releases/download/v0.1.3/spotexec_0.1.3_linux_arm64.tar.gz"
+      sha256 "de2a5c4a5ee7572354ebf0ba3b52853775f9048afcd74e69abd837471013547b"
       define_method(:install) do
         bin.install "spotexec"
         bin.install_symlink "spotexec" => "sx"
